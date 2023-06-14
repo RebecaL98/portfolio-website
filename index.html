@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	
+   
+    <div id="sidebar">
+      <ul>
+        <li><a href="#" onclick="showSection('about-me')">About Me</a></li>
+        <li><a href="#" onclick="showSection('my-projects')">My Projects</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+      </ul>
+    </div>
+    <div id="content">
+      <div id="about-me">
+        <h1>About Me</h1>
+        <section class="s1">
+            <div class="main-container">
+                <div class="greeting-wrapper">
+                <h1>Hi, I'm Rebeca Leu</h1>
+                </div>
+    
+                <div class="intro-wrapper">
+                    <div class="nav-wrapper">
+                      <div class="dots-wrapper">
+                        <div id="dot-1" class="browser-dot">
+                        </div>
+                        <div id="dot-2" class="browser-dot">
+                        </div>
+                        <div id="dot-3" class="browser-dot">
+                        </div>
+                     </div>
+                     <ul id="navigation">
+                        <li><a href="#contact-form">Contact</a></li>
+                     </ul>
+                    </div>
+    
+                    <div class="left-column">
+                        <img id="profile_pic" src="img/Portfolio-2.gif">
+                    </div>
+    
+                    <div class="right-column">
+    
+                        <div id="preview-shadow">
+                        <div id="preview">
+                            <div id="corner-tl" class="corner"></div>
+                            <div id="corner-tr" class="corner"></div>
+                            <h3>Who I am?</h3>
+                            <p>
+                                I'm Rebeca, a 25-year-old web developer with a contagious passion for coding. 
+                            </p>
+                            <div id="corner-br" class="corner"></div>
+                            <div id="corner-bl" class="corner"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="extra-text">
+                    <h1>A bit more about me...</h1>
+                    <p>With expertise in HTML, CSS, JavaScript, PHP, SQL, and WordPress, I create stunning websites while constantly learning. My energy and enthusiasm extend to collaboration, mentoring, and sharing knowledge with the tech community. I'm driven by excellence and eager to make a lasting impact in web development. Let's create something amazing together!</p>
+                </div>
+    
+            </div>
+        </section>
+      </div>
+      <div id="my-projects">
+        <section class="s1">
+            <div class="main-container">
+              <h1 style="text-align: center;">Some of my projects</h1>
+              <div class="post-wrapper">
+              
+                  <div>
+                  <div class="post">
+                      <img src="img/organic_me.png" class="thumbnail">
+                      <div class="post-preview">
+                         <h6 class="post-title">Organic Me </h6>
+                         <p class="post-intro">This is a organic shop website created from scratch using HTML & CSS based on specifications provided by the owner.</p>
+                      </div>
+                  </div>
+                </div>
+    
+                 <div>
+                  <div class="post">
+                      <img src="img/bike_king_borders.png" class="thumbnail">
+                      <div class="post-preview">
+                         <h6 class="post-title">Bike King Borders</h6>
+                         <p class="post-intro">This is a Bike shop website created from the scratch. The website offers all variaties of bikes and a service for rental and repairment with a booking system.</p>
+                      </div>
+                  </div>
+                </div>
+    
+                <div>
+                    <div class="post">
+                        <img src="img/active_scotland.png" class="thumbnail">
+                        <div class="post-preview">
+                           <h6 class="post-title">Active Scotland</h6>
+                           <p class="post-intro">This is a charity website designed to promote a healthy lifestyle, exercise and group activities. It is made using Wordpress. </p>
+                        </div>
+                    </div>
+                  </div>
+    
+              </div>
+            </div>
+        </section>
+      </div>
+      <div id="contact">
+        <h1>Contact</h1>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message"></textarea><br><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+    <script>
+      function showSection(section) {
+        // Hide all sections
+        var sections = document.querySelectorAll('div#content > div');
+        for (var i = 0; i < sections.length; i++) {
+          sections[i].style.display = 'none';
+        }
+        // Show the selected section
+        document.getElementById(section).style.display = 'block';
+      }
+    </script>
+</body>
+</html>
