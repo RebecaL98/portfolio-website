@@ -103,6 +103,10 @@ h1, h2, h3, h4, h5, h6, strong {
 	display: none;
   }
 
+  #contact p a{
+    color: #000;
+  }
+
   .s1{
     border-bottom:1px solid #1d1520;
     overflow: auto;
