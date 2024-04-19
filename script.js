@@ -1,3 +1,32 @@
+
+    // Function to show a specific section
+	function showSection(section) {
+		// Hide all sections
+		var sections = document.querySelectorAll('div#content > div');
+		for (var i = 0; i < sections.length; i++) {
+		  sections[i].style.display = 'none';
+		}
+		// Show the selected section
+		document.getElementById(section).style.display = 'block';
+	  }
+	
+	  // Show the 'About Me' section by default when the page loads
+	  window.onload = function() {
+		showSection('about-me');
+	  };
+	
+	  // Smooth scroll to anchor links
+	  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
+		  e.preventDefault();
+	
+		  document.querySelector(this.getAttribute('href')).scrollIntoView({
+			behavior: 'smooth'
+		  });
+		});
+	  });
+
+
 // Smooth scroll to anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener('click', function (e) {
